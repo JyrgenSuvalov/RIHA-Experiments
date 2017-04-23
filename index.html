@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8"/>
+  <title>RIHA-Git-Demo</title>
+
+  <!-- JQuery -->
+  <script src="https://code.jquery.com/jquery.min.js"></script>
+
+  <!-- Material Design icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  <!-- script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script -->
+  <!-- script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+  <!-- Stiilid -->
+  <style>
+
+    body, textarea, button, input {  
+    font-family: 'Times New Roman', serif !important;
+    font-size: 14pt !important; }
+
+    body { padding: 2rem 2rem 8rem 2rem; }
+
+    .ylarida { 
+        display: flex; 
+        justify-content: space-between;
+        margin-bottom: 1rem;
+      }
+
+    h1 { }
+
+    form { margin-bottom: 1rem; }
+
+  </style>
+
+  <!-- Skript -->
+  <script src='RIHA-Git-Demo.js'></script>
+
+  </head>
+
+  <body onload="valmistaEtte();">
+
+    <div class='container-fluid'>
+      <div class='row'>
+        <div class='col-xs-12 col-sm-10 col-md-8 col-lg-8 col-xl-6'>
+
+          <div class="ylarida">
+            <div>Git-andmehoidla demo</div>
+            <div><a href='https://github.com/e-gov/RIHA-Git-Demo'><img src='GitHub-Mark-32px.png'></a></div>
+          </div>
+
+          <!-- Pealkiri -->
+          <h1>Mis võiks olla järgmise versiooni nimi?</h1>
+
+
+          <p class='abitekst'>San Francisco startup-des on heaks tooniks nimetada reliise linnaosade järgi (Sunnydale, Buena Vista, Mission Bay jne). Kas RIHA järgmine versioon võiks olla "Kitseküla"? (asume Kitseküla asumis) Või "Uus Maailm"? Või hoopis "Sikupilli"? Mõni muu nimi?</p>
+
+          <form method="POST"
+            action="https://api.staticman.net/v2/entry/e-gov/RIHA-Git-Demo/master">
+            
+            <div class="form-group">
+              <label for='arvamus'>RIHA järgmise versiooni nimi:</label>
+              <textarea name="fields[arvamus]" id='arvamus' class="form-control" rows='1'>
+              </textarea>
+            </div>
+
+            <div class="form-group">
+              <label for='nimi'>
+                Arvamuse andis:
+              </label>
+              <input name="fields[nimi]" id='nimi' class="form-control" type="text">
+            </div>
+
+            <button type="submit" class="btn btn-secondary">Saada arvamus!</button>
+
+          </form>
+
+          <p>Aitäh!</p>
+
+        </div>  
+      </div>
+
+    </div>
+
+  </body>
+
+</html>

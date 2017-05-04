@@ -1,9 +1,9 @@
 {
-  "Lyhinimi": "rr"
+  "Lyhinimi": "rr",
   "Nimetus": "Rahvastikuregister",
-  "Standardid": "EVS 585:2007, EV ST 585:1990"
+  "Standardid": "EVS 585:2007, EV ST 585:1990",
   "Turvaklass":
-    { "ISKE rakendamise staatus": "Rakendatud, auditeerimata"
+    { "ISKE rakendamise staatus": "Rakendatud, auditeerimata",
       "Käideldavus (K)": "K3",
       "Terviklus (T)": "T2",
       "Konfidentsiaalsus (S)": "S2",

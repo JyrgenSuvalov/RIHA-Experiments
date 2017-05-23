@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>RIHA HTML prototype</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="bower_components/select2/dist/css/select2.min.css">
+    <link rel="stylesheet" href="bower_components/jquery-ui/themes/base/jquery-ui.min.css">
+    <link rel="stylesheet" href="bower_components/datatables/media/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" href="app.css">
+</head>
+<body style='padding: 4rem;'>
+<div id="wrap">
+
+<!-- Flexbox -->
+<div class='container'>
+  <div class='row'>
+    <div class='col-10'>
+      <div class='card card-alt'>
+      <form>
+        <div class='card-title'>
+            Kas teabest oli abi?<span class="fa fa-question-circle" data-container="body" data-toggle="popover" data-placement="top" data-title="Abi" data-content="Teavet kasutame RIHA paremaks tegemiseks" tabindex="0" data-original-title="" title=""></span>
+        </div>
+        <div class='card-block'>
+            <!-- Arvamus -->
+            <div class="form-group  row">
+                <label for="exampleSelect1" class="col-sm-4 col-form-label pr-sm-0 text-sm-right">Kas teabest oli abi?</label>
+                <div class="col-sm-8">
+                    <select class="form-control" id="exampleSelect1">
+                        <option selected disabled>Palun valige...</option>
+                        <option>Täiesti</option>
+                        <option>Osaliselt</option>
+                        <option>Väheselt määral</option>
+                        <option>Üldse mitte</option>
+                    </select>
+                </div>
+            </div>
+            <!-- Tekstiala -->
+            <div class="form-group row">
+              <label class='col-sm-4 col-form-label pr-sm-0 text-sm-right' for="KasulikTekst">Mida veel vajaksid?</label>
+              <div class='col-sm-8'>
+                <textarea class="form-control" type="text" id="KasulikTekst" rows='3'></textarea>
+              </div>
+            </div>
+        </div>
+        <div class='card-footer'>
+          <div class="actions-bar row align-items-center">
+            <div class="col">
+              <div class="buttons mt-0 justify-content-end">
+                <a class="btn btn-primary btn-lg btn-01" href="#" role="button">Saada</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/jquery-ui/jquery-ui.min.js"></script>
+<script src="bower_components/tether/dist/js/tether.min.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="bower_components/chart.js/dist/Chart.bundle.min.js"></script>
+<script src="bower_components/select2/dist/js/select2.min.js"></script>
+<script src="bower_components/datatables/media/js/jquery.dataTables.min.js"></script>
+<script src="bower_components/datatables-responsive/js/dataTables.responsive.js"></script>
+<script src="bower_components/datatables/media/js/dataTables.bootstrap4.min.js"></script>
+<script src="bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

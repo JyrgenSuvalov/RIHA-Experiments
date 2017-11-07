@@ -57,7 +57,7 @@ function doSearch()
                 var newRow = $(template);
                 newRow.find(".owner").text(item.details.owner.name);
                 newRow.find(".short_name a:first-child").text(item.details.short_name).attr("href", newRow.find(".short_name a:first-child").attr("href") + item.details.short_name);
-                newRow.find(".name a:first-child").text(item.details.name).attr("href", newRow.find(".short_name a:first-child").attr("href") + item.details.short_name);
+                newRow.find(".name a:first-child").text(item.details.name).attr("href", newRow.find(".name a:first-child").attr("href") + item.details.short_name);
                 var status = item.details.meta.system_status.status;
                 newRow.find(".status").text(statuses[status]);
                 newRow.find(".last-modified").text(item.details.meta.update_timestamp.substr(0,10));

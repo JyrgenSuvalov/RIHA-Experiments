@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Arhiiviväärtuslikud andmekogud - Riigi infosüsteemi haldussüsteem RIHA (prototüüp)</title>
+    <link rel="icon" type="image/png" href="https://github.com/e-gov/RIHA-Frontend/raw/master/logo/gov-CVI/coat-of-arms-favicon.png">
+    <link rel="apple-touch-icon" href="https://github.com/e-gov/RIHA-Frontend/raw/master/logo/gov-CVI/coat-of-arms-apple-touch-icon.png">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://abi.riha.ee/css/bower_components/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://abi.riha.ee/css/bower_components/select2/dist/css/select2.min.css">
+    <link rel="stylesheet" href="https://abi.riha.ee/css/bower_components/jquery-ui/themes/base/jquery-ui.min.css">
+    <link rel="stylesheet" href="https://abi.riha.ee/css/bower_components/datatables/media/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="https://abi.riha.ee/css/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" href="https://abi.riha.ee/css/bower_components/build/app.css">
+
+    <link rel="stylesheet" href="https://abi.riha.ee/css/resources.css">
+    <script src="https://abi.riha.ee/css/bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("#headerInclude").load("https://riha.win.ee/live/header.php #header");
+            $("#footerInclude").load("https://riha.win.ee/live/footer.php #footer");
+        });
+    </script>
+
+    <!-- Prototyping libraries -->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://kryogenix.org/code/browser/sorttable/sorttable.js"></script>
+<script>
+$(function ()
+{
+    var template = $('#table-row-template').html();
+    var statuses = {
+        ESTABLISHING: "asutamisel",
+        IN_USE: "kasutusel",
+        ENDED: "lõpetatud"
+    };
+    var url = "https://riha.win.ee/live/api/v1/systems/?page=0&sort=meta.update_timestamp&filter=short_name,jilike,(1)";
+    var databases = [
+        "eelnoud",
+        "ehis",
+        "rr",
+        "etis",
+        "ehr",
+        "rt",
+        "kkr",
+        "kr",
+        "kis",
+        "laevakr",
+        "mis",
+        "emsr",
+        "metsaregister",
+        "nhr",
+        "pria-eagis",
+        "knr",
+        "rrr",
+        "sadamaregister",
+        "skeeld",
+        "spr",
+        "tmr",
+        "teeregister",
+        "digilugu",
+        "valislepingud",
+        "veis",
+        "arireg"
+    ];
+
+    $.each(databases, function (name, code) {
+    var urls = url.replace("(1)", code);
+        $.ajax({
+            dataType: "json",
+            type: "GET",
+            url: urls,
+            success: function(response) {
+    	    var objects = $.parseJSON(JSON.stringify(response));
+            console.log(urls+" Total results: "+objects.totalElements);
+            objects.content.forEach(function (item, i) {
+                var newRow = $(template);
+                newRow.find(".owner").text(item.details.owner.name);
+                newRow.find(".short_name a:first-child").text(item.details.short_name).attr("href", newRow.find(".short_name a:first-child").attr("href") + item.details.short_name);
+                newRow.find(".name a:first-child").text(item.details.name).attr("href", newRow.find(".short_name a:first-child").attr("href") + item.details.short_name);
+                var status = item.details.meta.system_status.status;
+                newRow.find(".status").text(statuses[status]);
+                newRow.find(".last-modified").text(item.details.meta.update_timestamp.substr(0,10));
+                $("#table-row-template").parent().parent().append(newRow);
+                });
+            }
+        });
+    });
+});
+</script>
+</head>
+<body>
+    <div id="headerInclude">
+    </div>
+    <main class="container" id="content">
+        <header class="pagehead" style="background-image:url(https://abi.riha.ee/assets/images/data/intro-bg.png)">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="mb-0 mb-md-4">Arhiiviväärtuslikud andmekogud</h1>
+            </div>
+        </div>
+    </header>
+    <section class="col card p-3">
+        <div class="my-1">
+            <p>Nimekirja aluseks <a href="http://www.ra.ee/wp-content/uploads/2016/11/LISA-1-HO-nr-51-31.10.2017-ANDMEKOGUD.pdf">Rahvusarhiivi otsus nr 5-1/17/51</a>.</p>
+            <table cellspacing="0" class="table table-striped table-bordered dataTable sortable" id="info-systems-table" width="100%">
+                <thead class="thead-default">
+                    <tr>
+                        <th>Omanik</th>
+                        <th>Lühinimi</th>
+                        <th>Infosüsteemi nimi</th>
+                        <th>Staatus</th>
+                        <th>Viimati muudetud</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <script id="table-row-template" type="text/x-custom-template">
+                        <tr>
+                            <td class="owner"></td>
+                            <td class="short_name"><a href="https://www.riha.ee/Infos%C3%BCsteemid/Vaata/"></a></td>
+                            <td class="name"><a href="https://www.riha.ee/Infos%C3%BCsteemid/Vaata/"></a></td>
+                            <td class="status"></td>
+                            <td class="last-modified text-nowrap"></td>
+                        </tr>
+                    </script>
+                </tbody>
+            </table>
+        </div>
+    </section>
+</main>
+<div id="footerInclude"/>
+</div>
+
+</body>
+</html>

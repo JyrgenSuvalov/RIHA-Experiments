@@ -37,11 +37,11 @@ $(function ()
         MODIFICATION_REQUEST: "andmekoosseisu muutmise kooskõlastusel",
         FINALIZATION_REQUEST: "lõpetamise kooskõlastusel"
     };
-    var url = "https://riha.win.ee/live/api/v1/requests/";
+    var urls = "https://riha.win.ee/live/api/v1/requests/";
     $.ajax({
         dataType: "json",
         type: "GET",
-        url: url,
+        url: urls,
         success: function(response) {
       var objects = $.parseJSON(JSON.stringify(response));
         console.log(urls+" Total results: "+objects.totalElements);
@@ -78,9 +78,9 @@ $(function ()
                     <tr>
                         <th>Omanik</th>
                         <th>Lühinimi</th>
-                        <th>Staatus</th>
-                        <th>Kooskõlastuse algus</th>
-                        <th>Kooskõlastuse tähtaeg</th>
+                        <th>Etapp</th>
+                        <th>Algus</th>
+                        <th>Tähtaeg</th>
                     </tr>
                 </thead>
                 <tbody>

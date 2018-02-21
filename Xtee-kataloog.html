@@ -38,7 +38,7 @@ $(function ()
             if (item.status == "OK" && item.xRoadInstance == "EE" && systems.includes(item.memberCode+"-"+item.subsystemCode) == false) {
             systems.push(item.memberCode+"-"+item.subsystemCode);
             }
-        }
+        });
         systems.foreach(function (item, i) {
             var newRow = $(template);
             //newRow.find(".owner").text(item.organizationName);
@@ -48,7 +48,7 @@ $(function ()
             newRow.find(".started").text(item.dateCreated.substr(0,10));
             newRow.find(".ends").text(item.dateDeadline.substr(0,10));*/
             $("#table-row-template").parent().parent().append(newRow);
-            });
+        });
         }
     });
 });

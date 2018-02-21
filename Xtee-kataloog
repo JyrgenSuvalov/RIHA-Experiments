@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>X-tee alamsüsteemid - Riigi infosüsteemi haldussüsteem RIHA (prototüüp)</title>
+    <link rel="icon" type="image/png" href="https://github.com/e-gov/RIHA-Frontend/raw/master/logo/gov-CVI/coat-of-arms-favicon.png">
+    <link rel="apple-touch-icon" href="https://github.com/e-gov/RIHA-Frontend/raw/master/logo/gov-CVI/coat-of-arms-apple-touch-icon.png">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://abi.riha.ee/css/bower_components/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://abi.riha.ee/css/bower_components/select2/dist/css/select2.min.css">
+    <link rel="stylesheet" href="https://abi.riha.ee/css/bower_components/jquery-ui/themes/base/jquery-ui.min.css">
+    <link rel="stylesheet" href="https://abi.riha.ee/css/bower_components/datatables/media/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="https://abi.riha.ee/css/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" href="https://abi.riha.ee/css/bower_components/build/app.css">
+
+    <link rel="stylesheet" href="https://abi.riha.ee/css/resources.css">
+    <script src="https://abi.riha.ee/css/bower_components/jquery/dist/jquery.min.js"></script>
+
+    <!-- Prototyping libraries -->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://kryogenix.org/code/browser/sorttable/sorttable.js"></script>
+<script>
+$(function ()
+{
+    var template = $('#table-row-template').html();
+    var urls = "http://x-road.ee/kataloog/ee/index.json";
+    var systems = [];
+    $.ajax({
+        dataType: "json",
+        type: "GET",
+        url: urls,
+        success: function(response) {
+        var objects = $.parseJSON(JSON.stringify(response));
+        console.log(urls+" Total results: "+objects.length);
+        objects.forEach(function (item, i) {
+            if (item.status == "OK" && item.xRoadInstance == "EE" && systems.includes(item.memberCode+"-"+item.subsystemCode) == false) {
+            systems.push(item.memberCode+"-"+item.subsystemCode);
+            }
+        }
+        systems.foreach(function (item, i) {
+            var newRow = $(template);
+            //newRow.find(".owner").text(item.organizationName);
+            newRow.find(".short_name a:first-child").text(item).attr("href", newRow.find(".short_name a:first-child").attr("href") + item);
+            /*var status = item.type;
+            newRow.find(".status").text(statuses[status]);
+            newRow.find(".started").text(item.dateCreated.substr(0,10));
+            newRow.find(".ends").text(item.dateDeadline.substr(0,10));*/
+            $("#table-row-template").parent().parent().append(newRow);
+            });
+        }
+    });
+});
+</script>
+</head>
+<body>
+
+<header id="header">
+    <div class="header-bottom">
+        <nav class="navbar  navbar-toggleable-xl">
+            <div class="container">
+                <a class="navbar-brand" href="https://www.riha.ee/Avaleht"/>
+                    <img alt="Riigi infosüsteemi haldussüsteem" height="78" src="/assets/images/base/RIHA.png" width="234"></a>
+                    <button class="menu-toggle collapsed" type="button">
+                        <span></span>
+                    </button>
+                <nav class="collapse navbar-collapse" id="mainmenu">
+                    <ul class="navbar-nav mr-0 mr-xl-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://www.riha.ee/Avaleht">Avaleht</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://www.riha.ee/Infos%C3%BCsteemid">RIHA kataloog</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="https://varamu.riha.ee/">RIHA varamu <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://abi.riha.ee/">Abikeskus</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </nav>
+    </div>
+</header>
+<main class="container" id="content">
+    <header class="pagehead" style="background-image:url(https://abi.riha.ee/assets/images/data/intro-bg.png)">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="mb-0 mb-md-4">X-tee alamsüsteemid</h1>
+            </div>
+        </div>
+    </header>
+    <section class="col card p-3">
+        <div class="my-1">
+            <table cellspacing="0" class="table table-striped table-bordered dataTable sortable" id="info-systems-table" width="100%">
+                <thead class="thead-default">
+                    <tr>
+                        <th>Lühinimi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <script id="table-row-template" type="text/x-custom-template">
+                        <tr>
+                            <td class="short_name"><a href="https://www.riha.ee/Infos%C3%BCsteemid/Vaata/"></a></td>
+                        </tr>
+                    </script>
+                </tbody>
+            </table>
+        </div>
+    </section>
+</main>
+<footer id="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-sm-6 col-md-3 col-12">
+                <div class="block">
+                    <p class="head">Kasutajatugi</p>
+                    <ul class="contacts-list list-unstyled">
+                        <li>
+                            <div class="item-single">
+                                <span class="fa fa-envelope"></span>
+                                <div class="body">
+                                    <div class="content">
+                                        <a href="mailto:help@ria.ee">help@ria.ee</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        <div class="col-lg-3 col-sm-6 col-md-3 col-12">
+            <div class="block">
+                <p class="head">Abiinfo &amp; lingid</p>
+                <ul class="links-list list-unstyled">
+                <li><a href="https://abi.riha.ee/">Abikeskus</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-lg-3 col-sm-6 col-md-4 col-12">
+            <a href="https://www.ria.ee/">
+                <img alt="Riigi Infosüsteemi Amet" src="assets/images/base/RIA.png">
+            </a>
+        </div>
+        <div class="col-lg-3 col-sm-6 col-md-2 col-12">
+            <img alt="Euroopa Liidu Regionaalarengufond" src="assets/images/base/EL.png">
+        </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

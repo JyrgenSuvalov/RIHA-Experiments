@@ -5,7 +5,7 @@
     "effective_query_minutes": 15,
     "effective_query_proportion": 0.05,
     "stats": {
-        /*"2018": {
+        /* "2018": {
             "months": {
                 "1": {
                     "query_count": 21773089,
@@ -212,7 +212,7 @@
                     "secsrv_count": 126
                 }
             }
-        },*/
+        }, */
         "2017": {
             "months": {
                 "10": {

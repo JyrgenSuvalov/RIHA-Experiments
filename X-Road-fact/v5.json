@@ -9,7 +9,7 @@
 	"effective_query_minutes": 15,
 	"protocol_changes": 4,
 	"stats": {
-		"2018": {					
+		/*"2018": {					
 			"months": {				
 				"1": {			
 					"query_count": 40830037,		
@@ -164,7 +164,7 @@
 					}		
 				}			
 			}
-		},
+		},*/
 		"2017": {					
 			"months": {				
 				"1": {			

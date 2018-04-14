@@ -14,7 +14,7 @@ function compare(a, b) {
 }
 
 // Loads data from V5
-$.getJSON("X-Road-fact.json", function(data_v5) {
+$.getJSON("X-Road-data.js", function(data_v5) {
     // Loads data from V6
     $.getJSON("js/data_v6.json", function(data_v6) {
         // Set up variables

@@ -1,0 +1,365 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" 
+      type="image/png" 
+      href="https://www.ria.ee/x-tee/fact/favicon.png">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>X-TEE</title>
+    <!-- Bootstrap -->
+    <link href="https://www.ria.ee/x-tee/fact/css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://www.ria.ee/x-tee/fact/css/main.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  </head>
+  <body>
+	<div id="header">
+		<table border="0" width="810px" align="center" height="100%">
+			<tr>
+				<td width="50%">
+					<img src="https://www.ria.ee/x-tee/fact/images/logo.png">
+				</td>
+				<td align="right" width="50%">
+					<a id="lang_est" class="lang selected" href="#est">EST</a>
+					<a id="lang_eng" class="lang" href="#eng">ENG</a>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<div class="main_container" id="est">
+		<section class="icon1">
+			<div class="inner_data">
+				<div style="display:inline-block;"><h1>Päringuid sel kuul*</h1></div>
+				<div style="margin-top: -6px;display:inline-block;float: right;text-align: right;">Seisuga <span id="est_last_update_text" class="color-blue">--.--.----</span><br/><img style="display: inline-block;margin-top: 28px;"src="images/el.png"></div>
+				<div id="est_current_month_count" class="roman color-blue" style="font-size:120px;margin-top: 
+-19px;letter-spacing: -2px;">arvutan...</div>
+				<table border="0" width="100%">
+					<tr>
+						<td>
+							<div class="round_box" style="width:256px">
+								Viimasel kuul<sup>*</sup><br/>
+								<span id="est_last_month_count" class="color-blue">10 000 000</span>
+							</div>
+						</td>
+						<td align="center">
+							<div class="round_box" style="width:256px;">
+								Eelmisel aastal<br/>
+								<span id="est_last_year_count" class="color-blue">300 000 000</span>
+							</div>
+						</td>
+						<td align="right">
+							<div class="round_box" style="width:264px;">
+								Päringuid läbi aegade*<br/>
+								<span id="est_full_count" class="color-blue">2 318 916 319 233</span>
+							</div>
+						</td>
+					</tr>
+				</table>
+				<table border="0" width="100%" style="margin-top: 13px;">
+					<tr>
+						<td style="width: 158px;">
+							<span id="est_updays" class="color-blue" style="font-size:70px;letter-spacing: -4px;">6570</span>
+						</td>
+						<td style="line-height: 21px;padding-top: 10px;padding-left:10px;width: 389px">
+							järjestikust päeva on X-tee <br/>
+							Eestis toiminud tõrgeteta*
+						</td>
+						<td style="line-height: 21px;padding-top: 10px;">
+							Alates aastast 2001 on protokolli<br/>
+							muudetud vaid <span class="color-blue" id="est_protocol_changes">4</span> korda
+						</td>
+					</tr>
+					<tr>
+						<td colspan="3" style="font-size:14px;">
+							* <span id="est_last_update_text2">17.12.2001</span> andmete põhjal
+						</td>
+					</tr>
+				</table>
+				
+				<hr/>
+				
+			</div>
+		</section>
+		
+		<section class="icon2">
+			<div class="inner_data">
+				<div style="padding-top: 8px;">
+					<div style="display:inline-block;vertical-align:top;">
+						<h1>Eesti X-teel on:</h1>
+					</div>
+					<div style="display:inline-block;vertical-align:top;margin-left: 368px;">
+						<h1 style="font-size:20px">Teenuste arv, mida saab<br/>kasutada X-tee vahendusel</h1>
+					</div>
+				</div>
+				<div>
+					<div style="display:inline-block;vertical-align:top;text-align:right;font-size:17px;letter-spacing: 0;line-height: 22px;" class="color-blue">
+						<span id="est_member_count">1 143</span><br/>
+						<span id="est_gov_member_count">782</span><br/>
+						ca <span id="est_affected_parties_count">52 000</span><br/>
+						<span id="est_subsystem_count">1 169</span><br/>
+						<span id="est_secserv_count">220</span>
+					</div>
+					<div style="display:inline-block;vertical-align:top;font-size:17px;letter-spacing: 0;margin-left: 14px;line-height: 22px;" class="thin">
+						asutust ja ettevõtet<br/>
+						avaliku sektori asutust (sh kohaliku omavalitsuse asutused)<br/>
+						kaudselt X-tee teenuseid kasutavat ettevõtet või asutust<br/>
+						liidestatud infosüsteemi<br/>
+						liikmete poolt paigaldatud turvaserverit
+					</div>
+					<div style="display:inline-block;vertical-align:top;margin-left: 37px;font-size: 17px;">
+						<div id="est_service_count_last_month" class="color-blue" style="font-size:70px">1300</div>
+						Iga teenuseid osutav osapool<br/>pakub keskmiselt <span id="est_average_service_count_per_provider" class="color-blue">2</span> teenust
+					</div>
+				</div>
+				<hr/>
+			</div>
+		</section>
+		
+		<section class="icon3" style="margin-top: 30px;">
+			<div class="inner_data">
+				<div style="display:inline-block;vertical-align:top;">
+					<h1 style="margin-bottom: 10px;"><span class="color-blue">Disainitud</span> turvaliseks</h1>
+					Traditsioonilised ründevektorid ei ole X-tee<br/>
+					ülesehituse ja arhitektuuri tõttu kasutatavad
+				</div>
+				<div style="display:inline-block;vertical-align:top;margin-left: 204px">
+					<div class="thin" style="margin-bottom: 6px;">X-tee rakendab turvatehnoloogiaid</div>
+					<span class="color-blue">XAdES</span>, <span class="color-blue">ASiC</span>, <span class="color-blue">VPN</span>, <span class="color-blue">RSA</span>,<br/>
+					<span class="color-blue">TSL</span>, <span class="color-blue">RFC3161</span>, <span class="color-blue">OCSP</span>, <span class="color-blue">PKI</span>
+				</div>
+				<hr style="margin-top: 30px;">
+			</div>
+		</section>
+		
+		<section class="icon1">
+			<div class="inner_data">
+				<div style="display:inline-block;vertical-align:top;">
+					<h1 style="margin-bottom: 10px;">5 populaarseimat* teenuste osutajat</h1>
+					<!-- look how the english table is made! span to div conversation must be done here too. -->
+					<table border="0">
+						<tr>
+							<td class="color-blue" align="right" style="padding-top: 6px;line-height: 22px;">
+								<div class="topnr" id="est_top_producers_1_count">-</div>
+								<div class="topnr" id="est_top_producers_2_count">-</div>
+								<div class="topnr" id="est_top_producers_3_count">-</div>
+								<div class="topnr" id="est_top_producers_4_count">-</div>
+								<div class="topnr" id="est_top_producers_5_count">-</div>
+							</td>
+							<td style="padding-top: 6px;line-height: 22px;padding-left: 25px;">
+								<div class="toptext" id="est_top_producers_1_name">a</div>
+								<div class="toptext" id="est_top_producers_2_name">b</div>
+								<div class="toptext" id="est_top_producers_3_name">c</div>
+								<div class="toptext" id="est_top_producers_4_name">d</div>
+								<div class="toptext" id="est_top_producers_5_name">e</div>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2" style="font-size:14px;">
+								<br/>
+								* Teenuseosutajale tehtud päringute arv viimasel kuul
+							</td>
+						</tr>
+					</table>
+				</div>
+				<div style="display:inline-block;vertical-align:top;align-self:right;float:right;margin-left: 10px">
+					<div class="thin" style="margin-bottom: 6px;">X-teega liidestatud infosüsteemide<br/>populaarseimad platvormid</div>
+					<img src="https://www.ria.ee/x-tee/fact/images/langs.png">
+				</div>
+				<hr style="margin-top: 36px;">
+			</div>
+		</section>
+		
+		<section class="icon4">
+			<div class="inner_data">
+				<div class="thin" style="font-size: 17px;margin-top: 15px;">
+					<span id="est_query_effective_percentage">33%</span> X-tee päringutest on käivitatud inimeste poolt. 
+					Eeldades, et neist iga päring säästis <span id="est_query_effective_minutes">15</span> minutit aega, siis
+					<span style="font-size:22px">eelmisel aastal hoiti nende päringutega kokku <span id="est_query_saved_years" style="font-size:70px;" class="color-blue 
+roman">X</span> aasta jagu tööaega.</span><br />
+					Ülejäänud päringute osas hinnangud puuduvad.
+					<br/><br />
+					<span style="font-size: 14px; letter-spacing: 1px;"><i>X-teed tutvustav materjal on valminud EL struktuuritoetuse toetusskeemist “Infoühiskonna teadlikkuse tõstmine” Euroopa Regionaalarengu Fondi rahastusel. </i></span>
+				</div>
+			</div>
+		</section>
+	</div>
+	
+	<!--------------------------------------------------------------------------------->
+	
+	<div class="main_container" id="eng">
+		<section class="icon1">
+			<div class="inner_data">
+				<div style="display:inline-block;"><h1>Requests this month*</h1></div>
+				<div style="margin-top: -6px;display:inline-block;float: right;text-align:right">As of <span id="eng_last_update_text" class="color-blue">--.--.----</span><br/><img style="display: inline-block;margin-top: 28px;"src="https://www.ria.ee/x-tee/fact/images/el_eng.png"></div>
+				<div id="eng_current_month_count" class="roman color-blue" style="font-size:120px;margin-top: 
+-19px;letter-spacing: -2px;">counting...</div>
+				<table border="0" width="100%">
+					<tr>
+						<td>
+							<div class="round_box" style="width:256px">
+								Latest month<sup>*</sup><br/>
+								<span id="eng_last_month_count" class="color-blue">10 000 000</span>
+							</div>
+						</td>
+						<td align="center">
+							<div class="round_box" style="width:256px;">
+								Previous year<br/>
+								<span id="eng_last_year_count" class="color-blue">300 000 000</span>
+							</div>
+						</td>
+						<td align="right">
+							<div class="round_box" style="width:264px;">
+								Requests to date*<br/>
+								<span id="eng_full_count" class="color-blue">2 318 916 319 233</span>
+							</div>
+						</td>
+					</tr>
+				</table>
+				<table border="0" width="100%" style="margin-top: 13px;">
+					<tr>
+						<td style="width: 158px;">
+							<span id="eng_updays"  class="color-blue" style="font-size:70px;letter-spacing: -4px;">6570</span>
+						</td>
+						<td style="line-height: 21px;padding-top: 10px; padding-left: 10px; width: 371px">
+							consecutive days of smooth<br/>
+							X-Road experience in Estonia*
+						</td>
+						<td style="line-height: 21px;padding-top: 10px;">
+							As of 2001, the protocol<br/>
+							has been amended only <span class="color-blue" id="eng_protocol_changes">4</span> times
+						</td>
+					</tr>
+					<tr>
+						<td colspan="3" style="font-size:14px;">
+							* Based on data from <span id="eng_last_update_text2">2001 Dec 17</span>
+						</td>
+					</tr>
+				</table>
+				
+				<hr/>
+				
+			</div>
+		</section>
+		
+		<section class="icon2">
+			<div class="inner_data">
+				<div style="padding-top: 8px;">
+					<div style="display:inline-block;vertical-align:top;">
+						<h1 style="font-size:20px">The X-Road in Estonia has:</h1>
+					</div>
+					<div style="display:inline-block;vertical-align:top;margin-left: 274px;">
+						<h1 style="font-size:20px">Number of services that<br/>can be used via the X-Road</h1>
+					</div>
+				</div>
+				<div>
+					<div style="display:inline-block;vertical-align:top;text-align:right;font-size:17px;letter-spacing: 0;line-height: 22px;" class="color-blue">
+						<span id="eng_member_count">1 143</span><br/>
+						<span id="eng_gov_member_count">782</span><br/>
+						ca <span id="eng_affected_parties_count">52 000</span><br/>
+						<span id="eng_subsystem_count">1 169</span><br/>
+						<span id="eng_secserv_count">220</span>
+					</div>
+					<div style="display:inline-block;vertical-align:top;font-size:17px;letter-spacing: 0;margin-left: 14px;line-height: 22px;" class="thin">
+						institutions and enterprises<br/>
+						public sector institutions<br/>
+						organizations as indirect users of X-Road services<br/>
+						interfaced information systems<br/>
+						security servers installed by members
+					</div>
+					<div style="display:inline-block;vertical-align:top;margin-left:108px;font-size: 17px;">
+						<div id="eng_service_count_last_month" class="color-blue" style="font-size:70px">1 300</div>
+						Every party who provides services<br/>offers <span id="eng_average_service_count_per_provider" class="color-blue">2</span> services on average
+						
+					</div>
+				</div>
+				<hr/>
+			</div>
+		</section>
+		
+		<section class="icon3" style="margin-top: 30px;">
+			<div class="inner_data">
+				<div style="display:inline-block;vertical-align:top;">
+					<h1 style="margin-bottom: 10px;"><span class="color-blue">Designed</span> to be secure</h1>
+					Traditional attacking vectors cannot be used<br/>
+					with the X-Road due to its structure and architecture
+				</div>
+				<div style="display:inline-block;vertical-align:top;margin-left: 126px;">
+					<div class="thin" style="margin-bottom: 6px;">X-Road implements the following<br/>security technologies</div>
+					<span class="color-blue">XAdES</span>, <span class="color-blue">ASiC</span>, <span class="color-blue">VPN</span>, <span class="color-blue">RSA</span>,<br/>
+					<span class="color-blue">TSL</span>, <span class="color-blue">RFC3161</span>, <span class="color-blue">OCSP</span>, <span class="color-blue">PKI</span>
+				</div>
+				<hr style="margin-top: 30px;">
+			</div>
+		</section>
+		
+		<section class="icon1">
+			<div class="inner_data">
+				<div style="display:inline-block;vertical-align:top;">
+					<h1 style="margin-bottom: 10px;">5 most popular* service providers</h1>
+					<table border="0">
+						<tr>
+							<td class="color-blue" align="right" style="padding-top: 6px;line-height: 22px;">
+								<div class="topnr" id="eng_top_producers_1_count">-</div>
+								<div class="topnr" id="eng_top_producers_2_count">-</div>
+								<div class="topnr" id="eng_top_producers_3_count">-</div>
+								<div class="topnr" id="eng_top_producers_4_count">-</div>
+								<div class="topnr" id="eng_top_producers_5_count">-</div>
+							</td>
+							<td style="padding-top: 6px;line-height: 22px;padding-left: 25px;">
+								<div class="toptext" id="eng_top_producers_1_name">a</div>
+								<div class="toptext" id="eng_top_producers_2_name">b</div>
+								<div class="toptext" id="eng_top_producers_3_name">c</div>
+								<div class="toptext" id="eng_top_producers_4_name">d</div>
+								<div class="toptext" id="eng_top_producers_5_name">e</div>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2" style="font-size:14px;">
+								<br/>
+								* By query count towards the service provider in last month
+							</td>
+						</tr>
+					</table>
+				</div>
+				<div style="display:inline-block;vertical-align:top;align-self:right;float:right;margin-left: 10px">
+					<div class="thin" style="margin-bottom: 6px;">Most popular platforms of<br/>information systems that have<br/>been interfaced with the X-Road</div>
+					<img src="https://www.ria.ee/x-tee/fact/images/langs.png">
+				</div>
+				<hr style="margin-top: 36px;">
+			</div>
+		</section>
+		
+		<section class="icon4">
+			<div class="inner_data">
+				<div class="thin" style="font-size:17px; margin-top: 15px;">
+					<span id="eng_query_effective_percentage">33%</span> of requests on X-Road are submited by human users. 
+					Assuming that every request saves <span id="eng_query_effective_minutes">15</span> minutes - those 
+					<span style="font-size:22px">request have saved <span id="eng_query_saved_years" style="font-size:70px;" class="color-blue roman">X</span> working years 
+during pevious calendar year.</span><br />
+					There are no esitmates on the rest of the queries.
+					<br/>
+					<br/>
+					<span style="font-size: 14px; letter-spacing: 1px;"><i>The introductory material of the X-Road has been compiled with funding from the structural funds support scheme “Raising Public Awareness about the Information Society” of the European Regional Development Fund.</i></span>
+				</div>
+			</div>
+		</section>
+	</div>
+	
+	
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://www.ria.ee/x-tee/fact/js/bootstrap.min.js"></script>
+	<script src="https://www.ria.ee/x-tee/fact/js/main.js"></script>
+	<script src="X-Road-fact.js"></script>
+  </body>
+</html>

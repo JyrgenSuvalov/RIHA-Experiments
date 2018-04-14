@@ -1,0 +1,50 @@
+@font-face {
+  font-family: 'Helvetica';
+  src: url("thin.eot");
+  src: local("âک؛"), url("thin.woff") format("woff"), url("thin.ttf") format("truetype"), url("thin.svg") format("svg");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'Helvetica';
+  src: url("normal.eot");
+  src: local("âک؛"), url("normal.woff") format("woff"), url("normal.ttf") format("truetype"), url("normal.svg") format("svg");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Helvetica';
+  src: url("bold.eot");
+  src: local("âک؛"), url("bold.woff") format("woff"), url("bold.ttf") format("truetype"), url("bold.svg") format("svg");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Roman';
+  src: url("roman.eot");
+  src: local("âک؛"), url("roman.woff") format("woff"), url("roman.ttf") format("truetype"), url("roman.svg") format("svg");
+}
+#header .logo {
+  background-image: url("https://www.ria.ee/x-tee/fact/images/logo.png");
+}
+.main_container {
+  background-image: url("https://www.ria.ee/x-tee/fact/images/bg_image.png");
+}
+.icon1 {
+  background-image: url("https://www.ria.ee/x-tee/fact/images/icon1.png");
+}
+.icon2 {
+  background-image: url("https://www.ria.ee/x-tee/fact/images/icon2.png");
+}
+.icon3 {
+  background-image: url("https://www.ria.ee/x-tee/fact/images/icon3.png");
+}
+.icon4 {
+  background-image: url("https://www.ria.ee/x-tee/fact/images/icon4.png");
+}
+#image_langs {
+  background-image: url("https://www.ria.ee/x-tee/fact/images/langs.png");
+}
+#button_print a {
+  background-image: url("https://www.ria.ee/x-tee/fact/images/print.png");
+}

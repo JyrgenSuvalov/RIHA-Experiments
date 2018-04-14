@@ -16,7 +16,7 @@ function compare(a, b) {
 // Loads data from V5
 $.getJSON("X-Road-data.js", function(data_v5) {
     // Loads data from V6
-    $.getJSON("js/data_v6.json", function(data_v6) {
+    $.getJSON("X-Road-data-v6.js", function(data_v6) {
         // Set up variables
         var final_object = data_v5;
         var addition_list = ["secsrv_count", "service_count", "subsystem_count", "query_count"];
